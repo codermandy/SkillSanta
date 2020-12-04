@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Word</title>
+</head>
+<body>
+    <script>
+        const findWord=(str,word)=>{
+            str=str.toLowerCase();
+            document.write(`${word} was found ${str.split(word).length-1} times.`);
+        }
+        findWord("Hello hello who are you?","hello")
+    </script>
+</body>
+</html>

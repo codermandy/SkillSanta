@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a=0,b=-1,c=4;
+        let arr=[a,b,c];
+        function sortNum(a,b,c){
+           if(a>b && a>c){
+               if(b>c){
+                   alert(`${a} ${b} ${c}`);
+                }
+                else alert(`${a} ${c} ${b}`);
+           }
+        }
+           if(b>c && b>a){
+               if(a>c){
+                   alert(`${b} ${a} ${c}`);
+                }
+                else alert(`${b} ${c} ${a}`);
+           }
+           if(c>b && c>a){
+               if(b>a){
+                   alert(`${c} ${b} ${a}`);
+                }
+                else alert(`${c} ${a} ${b}`);
+           }
+        sortNum(a,b,c)
+    </script>
+</body>
+</html>

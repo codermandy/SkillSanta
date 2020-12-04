@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Odd Even Prime</title>
+</head>
+<body>
+    <script>
+const checkPrime=(n)=>{
+    let isPrime=true;
+    if(n===1) return;
+    else if(n>1){
+        for(let i=2;i*i<=n;i++){
+            if(n%i==0){
+                isPrime=false;
+                break;
+            }
+            isPrime=true;
+        }
+              }
+           return isPrime; }
+
+const isOdd=n=>{if(n%2!==0) return true;}
+const isEven=n=>{if(n%2===0) return true;}
+        let i,n=parseInt(Math.random()*100);
+        for(i=0;i<n;i++){
+         if(checkPrime(i)) alert(`${i} is Prime`)
+         else if(isEven(i)) alert(`${i} is Even`)
+         else if(isOdd(i)) alert(`${i} is Odd`)
+         if(checkPrime(i) && isOdd(i)) alert(`${i} is Prime and Odd`)
+        else if(checkPrime(i) && isEven(i)) alert(`${i} is Prime and Even`)
+        
+        }
+    </script>
+</body>
+</html>

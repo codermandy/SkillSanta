@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoof E-Mail</title>
+</head>
+<body>
+    <script>
+        function protectMail(email){
+            email=email.split("@");
+            let i;
+            for(i=0;i<email.length;i++){
+                email[0]=email[0].substring(0,4)+"....";
+            }
+            email=email.join("@")
+            document.write(email);
+        }
+        protectMail("kamramohit96@gmail.com")
+    </script>
+</body>
+</html>
