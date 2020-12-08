@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Unorder</title>
+</head>
+<body>
+    <div id="list">
+    <ul id="unorder">
+        <li>Chirag</li>
+        <li>Deepti</li>
+        <li>Anil</li>
+        <li>Rubina</li>
+    </ul>
+    </div>
+    <div id="btn">
+        <button type="button" onclick="orderList()">Order</button>
+    </div>
+    <script>
+        function orderList(){
+            let ell=document.getElementsByTagName('ul')[0];let ell2=document.createElement("ol");
+            ell2.innerHTML=ell1.innerHTML;
+            ell.parentNode.replaceChild(ell,ell2);
+        }
+        
+    </script>
+    
+</body>
+</html>

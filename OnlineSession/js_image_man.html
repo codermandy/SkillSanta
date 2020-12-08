@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Manipulation</title>
+    <style>
+     
+        #box{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            background-color: rgb(2, 223, 2);
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="box"></div>
+    <!-- <img onmouseover="skillsanta1(this)" onmouseout="skillsanta2(this)"src="resources/maxresdefault.jpg" alt="lion with headphones" height="100px" width="100px"> -->
+    <button onclick="SkillSanta()">Move</button>
+
+
+   <script>
+        function SkillSanta(){
+            let elem=document.getElementById("box");
+            let i=0;
+            let boxInt=setInterval(move_elem,200)
+            function move_elem(){
+                if(i==300){
+                    clearInterval(boxInt)
+                }else if(i=100){
+                i++;
+                elem.style.left=i+"px";
+                elem.style.top=i+"px";
+                }else{
+                i--;
+                elem.style.left=i+"px";
+                elem.style.top=i+"px";
+            }
+        }
+
+        }
+    //    function skillsanta1(temp){
+    //     temp.style.height="1024px"
+    //     temp.style.width="768px"
+    //     //console.log("Hi from skill santa 1");
+    //    }
+    //    function skillsanta2(temp){
+    //     temp.style.height="100px"
+    //     temp.style.width="100px"
+    //     //console.log("Hi from skill santa 1");
+    //    }
+   </script> 
+</body>
+</html>

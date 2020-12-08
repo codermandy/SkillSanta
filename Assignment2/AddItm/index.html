@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add item to blank array</title>
+</head>
+<body>
+    <input type="text" id='txt1'></input>
+    <button id='btn1' onclick="addElem">Add</button>
+    <button id='btn2' onclick="dispElem">Display</button>
+    <div id="res"></div>
+</body>
+<script>
+    let x=0,
+    arry=Array();
+    function addElem(){
+        arry[x]=document.getElementById("txt1").value;
+    alert(`Element ${arry[x]} added at index ${x}`);
+    document.getElementById("txt1").value="";
+    }
+    function dispElem(){
+        let d=""
+        for(let i=0;i<arry.length;i++){
+            d+=`Element ${i} = arry[i] `;
+        }
+        document.getElementById("res").innerHTML=d;
+    }
+</script>
+</html>
