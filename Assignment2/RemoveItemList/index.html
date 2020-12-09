@@ -6,15 +6,21 @@
     <title>Remove ITem from DD LIst</title>
 </head>
 <body>
-    <form action="">
-        <select name="" id="colorSelect">
-        <option value="">Web Development</option>
+    <form>
+        <select id="colorSelect" onchange="removecolor()">
+        <option>Web Development</option>
         <option>Python</option>
         <option>Fashion Designing</option>
         <option>Java Script</option>
         <option value="">Political Science</option>
         </select>
-        <input type="button" onclick="removecolor()" value="Select and Remove">
+        <button onclick="removecolor()">Select and remove</button>
     </form>
-</body>
+<script>
+    function removecolor(){
+            let item=document.getElementById("colorSelect");
+            item.remove(item.selectedIndex)
+    }
+</script></body>
+
 </html>

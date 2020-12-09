@@ -9,6 +9,21 @@
     
 </body>
 <script>
-    
+    arry=['a','a','b','b','b',1,2,4,'b','c'];
+    let maxfreq=1,
+    cnt=0,
+    temp;
+    for(let i=0;i<arry.length;i++){
+        for(let j=i;j<arry.length;j++){
+            if(arry[i]==arry[j])
+                cnt++;
+            if(maxfreq<cnt){
+                maxfreq=cnt;
+                temp=arry[i];
+            }
+        }
+        cnt=0;
+    }
+    document.write(`Most frequent element is ${temp} which occured ${maxfreq} times`)
 </script>
 </html>
