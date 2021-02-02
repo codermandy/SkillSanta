@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Co-Ordinates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>
+        Location Co-Ordinates
+    </h2>
+    <p>Click on button to get current co-ordinates</p>
+    <button onclick="getLocation()">Click Me!</button>
+    <div id="main"> </div>
+    
+
+    <div class="parent" id="one">One</div>
+    <div class="parent" id="two">Two</div>
+    <div class="parent" id="three">Three</div>
+    <div class="parent" id="four">Four</div>
+        
+    </div>
+</body>
+<script>
+    let cord=document.getElementById("main");
+    function getLocation() {
+        if(navigator.geolocation)
+        navigator.geolocation.getCurrentPosition(showPosition);
+        else
+            cord.innerHTML="<h3> Geolocation is not supported in this browser";
+    }
+    function showPosition(position){
+        let latitude = position.coords.latitude
+        let longitude  =position.coords.longitude
+        let navigator=position.coords.
+        cord.innerHTML="<h3> Latitude: " + latitude + "<br>" + "Longitude: "+ longitude+ "<br>"+navigator+"</h3>"
+
+
+    }
+</script>
+</html>

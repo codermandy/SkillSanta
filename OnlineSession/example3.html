@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slidercontainer">
+        <div class="showSlide fade">
+            <img src="OnlineSession\resources\maxresdefault.jpg" alt="">
+            <div class="content">Lorem, ipsum dolor.</div>
+        </div>
+        <div class="showSlide fade">
+            <img src="OnlineSession\resources\maxresdefault.jpg" alt="">
+            <div class="content">Lorem, ipsum dolor.</div>
+        </div>
+        <div class="showSlide fade">
+            <img src="OnlineSession\resources\background.jpg" alt="">
+            <div class="content">Lorem, ipsum dolor.</div>
+        </div>
+        <div class="showSlide fade">
+            <img src="OnlineSession\resources\background.jpg" alt="">
+            <div class="content">Lorem, ipsum dolor.</div>
+        </div>
+        <a class="left" onclick="nextSlide(-1)"><</a>
+        <a class="right" onclick="nextSlide(1)">></a>
+    </div>
+    <script>
+        let slide_index=1;
+        function nextSlide(n){
+            displaySlides(slide_index+=n);
+        }
+        function currentSlide(n){
+
+        }
+        function displaySlides(){
+            let i;
+            let slides=document.getElementByClassName("showSlide");
+            
+            slides[0].style.display="block"
+        }
+
+    </script>
+</body>
+</html>

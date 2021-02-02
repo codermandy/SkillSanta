@@ -7,11 +7,11 @@
 </head>
 <body>
     <div id="clock"></div>
-    <button id="btn1" onclick="twelHr()">12 Hour Clock</button>
-    <button id="btn2" onclick="twoFourHr()">24 Hour Clock</button>
+    <button id="btn1" onclick=" return setInterval(twelHr,1000)">12 Hour Clock</button>
+    <button id="btn2" onclick=" return setInterval(twoFourHr,1000)">24 Hour Clock</button>
 </body>
 <script>
-    function twelHr(){
+    let twelHr=()=>{
         let date=new Date(),
 hr=date.getHours(),
         mn=date.getMinutes(),
@@ -19,7 +19,7 @@ hr=date.getHours(),
         session="AM"; 
 
         if(hr==0){
-            h=12;
+            hr=12;
         }
         if(hr>12){
             hr=hr-12
@@ -31,10 +31,9 @@ hr=date.getHours(),
         sc=(sc<10)? `0${sc}`:sc;
 
         let time= hr + ":"+ mn +":"+sc + " "+session;
+     
         document.getElementById(
-        "clock").innerText=time;
-        setTimeout(twelHr,1000);
-   
+        "clock").innerText=time;   
     }
     function twoFourHr(){
         let date=new Date(),
@@ -49,8 +48,7 @@ hr=date.getHours(),
         let time= hr + ":"+ mn +":"+sc;
         document.getElementById(
         "clock").innerText=time;
-        setTimeout(twoFourHr,1000);
-        
+      
         
     }
 </script>

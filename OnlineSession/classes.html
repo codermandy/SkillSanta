@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes</title>
+</head>
+<body>
+</body>
+<script>
+
+    class SkillSanta{
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        view(){
+            let final = `My name is ${this.name} and age is ${this.age}`
+            return final;
+        }
+    }
+    class SKillSanta2{
+        constructor(name,age){
+            this.name=SkillSanta.name;
+            this.age=SkillSanta.age;
+        }
+    }
+        let cand1=new SkillSanta("Sachin",23);
+        let cand2=new SkillSanta("Nikunj",23);  
+        console.log(cand1.name);
+        console.log(cand2.name);
+        console.log(cand1.age);
+        console.log(cand2.age)
+        console.log(cand1.view())
+        console.log(cand2.view())
+    let cand3 = new SkillSanta("")
+    </script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Survey</title>
+</head>
+
+<body>
+    <h3>Recruitment Survey</h3>
+    <form action="#" onsubmit="return ageCalculator(dob)" method="post" name="myForm" >
+        <label>Enter your Date of Birth</label>
+        <input type="date" placeholder="mm-dd-yyyy" id="dob">
+        <button type="submit" onclick="return ageCalculator(dob)" id="submit">Validate Age</button>
+    </form>
+    <div id="ouput"></div>
+
+</body>
+<script>
+    document.forms['myForm']['dob']
+     function ageCalculator(dob) {
+        let today = new Date(),
+            birthDate = new Date(dob);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        let m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate)) {
+            age--;
+        }
+        console.log(age)
+        return age;
+        console.log(today.getFullYear())
+    }
+    let age = ageCalculator(dob);
+    if (age > 14 && age <= 24) {
+        alert(`You are eligible`)
+
+    } else {
+        alert('You are not eligible')
+    }
+</script>
+
+</html>
