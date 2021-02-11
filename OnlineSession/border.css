@@ -1,0 +1,33 @@
+/* style, color, width, radius */
+/* 
+body{
+    background-image:url(resources/background.jpg);
+    background-attachment: fixed;
+    background-repeat: ;
+    
+} */
+
+/* style color width radius */
+
+.border1{
+    border-style: dashed;
+    color: navy;
+    width: 100%;
+}
+
+.border2{
+    border-style: solid;
+    color: rgb(0, 128, 21);
+    width: 100%;
+}
+
+.border3{
+    border:7px solid black;
+    
+}
+
+.border4{
+    border:5px groove green;
+    color: navy;
+    width: 100%;
+}

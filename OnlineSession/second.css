@@ -1,0 +1,40 @@
+.wrapper{
+    overflow: auto;
+}
+#main{
+    background-color: burlywood;
+}
+
+#left{
+    float: none;
+    width: auto;
+}
+#menulist{
+    margin:0;
+    padding:0;
+
+
+}
+.menuitems{
+    background-color: cornflowerblue;
+    border:5px solid blueviolet;
+    border-radius: 4px;
+    margin:3px;
+    padding:3px;
+    text-decoration: none;
+    width: auto;
+
+    
+}
+
+@media screen and (min-width:480px){
+    #left{
+        width:200px;
+        float:left;
+    }
+    #main{
+    margin-left: 220px;
+    margin-top:-200px;
+    
+    }
+}

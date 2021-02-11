@@ -1,9 +1,11 @@
-function dupRem(String){
+function dupRem(list){
 let uniqChar=[];
-String.array.forEach(c => {
-    if(!uniqChar.includes(c)){
-        uniqChar.push(c);
+list.array.forEach(c => {
+    if(!uniqChar){
+        uniqChar.add(c);
     }
-    return uniqChar;
 });
 }
+let list=['Virat','Sachin','Saurav','Virat']
+document.getElementById('with-dup').innerHTML+=list;
+document.getElementById('without-dup').innerHTML+=dupRem(list)

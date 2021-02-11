@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference B/w Dates</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Difference Between Dates</title>
+    </head>
+    <body>
+        <h2>Difference Between Dates</h2>
+        <label for="date1">Date1</label>
+        <input type="date" id="date1">
+        <br>
+        <br>
+        <label for="date2">Date2</label>
+        <input type="date" id="date2">
+        <br>
+        <br>
+        <button type="button" onclick="getDiff(date1,date2)">Get the Difference</button>
+        <br>
+        <br>
+        <span id="difference"></span>
+
+    </body>
+    </html>
+    <script>
+        const date1=document.getElementById('date1').value;
+        const date2=document.getElementById('date2').value;
+        let dateObj1=new Date(date1);
+        let dateObj2=new Date(date2);
+
+        let diffDate=dateObj2.getTime()-dateObj1.getTime();
+        console.log(date1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.myslides{
+    display:none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.slideshow-container{
+    max-width: 1000px;
+    position:relative;
+    margin:auto;
+}
+
+.prev, .next{
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    margin:auto;
+    padding:15px;
+    margin-top: 22px;
+    color:white;
+    font-weight:bold;
+}
+
+.next{
+    right:0;
+    border-radius: 3px;
+    border-radius:3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+background-color: yellowgreen;
+}
+
+.next{
+    color:whitesmoke;
+    padding :8px 12px;
+}
+
+.numbertext{
+    color:white;
+    font-size: 10px;
+    position:absolute;
+    top:0;
+}
+
+.active{
+background-color: black;
+}

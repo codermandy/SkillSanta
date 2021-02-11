@@ -11,14 +11,15 @@
     <h2>Credit Card Validation</h2>
     <div>Enter the 16 digit card no to validate credit card</div>
     <form onsubmit="return validateCC()">
-        <input type="text" id="num" name="Credit Card Number"> </input>
+        <input type="text" id="num" name="Credit Card Number" value=""> </input>
         <input type="submit" value="Validate">
         <div id="validCheck"></div>
     </form>
 <div id="cardValid"></div>
 </body>
 <script>
-    const cardNo=document.getElementById("num");
+    const cardNo=document.getElementById('num').value;
+    console.log(cardNo);
      function validateCC(cardNo) {
         let sum=0;
        let regexp=/^(\d{4}[\s*-]?){16}$/;

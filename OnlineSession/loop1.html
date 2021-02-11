@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Loop statement</h2>
+    <script>
+        let names=['Mohit','Andy','Grandy','Mandy'];
+        let i=1,
+        len=names.length;
+        for(;i<len;i++){
+            console.log(names[i])
+        }
+
+        let student={
+            name:'Andy Dev',
+            age:22,
+            email:'anondev@gmail.com',
+            username:'anondev0009'
+        };
+
+        let j;
+        for(j in student){
+            document.write(student[j]+"<br>");
+        }
+        let k;
+        let courses=['pythoon','webdev','machien learning'];
+        for(k of courses){
+            document.write(k+"<br>");
+        }
+
+    </script>
+</body>
+</html>
